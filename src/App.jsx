@@ -1,0 +1,21 @@
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import RtlLayout from "layouts/rtl";
+import AdminLayout from "layouts/admin";
+import AuthLayout from "layouts/auth";
+import Filter from "layouts/front/filter";
+import Home from "layouts/front/home";
+const App = () => {
+  return (
+    <Routes>
+      <Route path="auth/*" element={<AuthLayout />} />
+      <Route path="admin/*" element={<AdminLayout />} />
+      <Route path="rtl/*" element={<RtlLayout />} />
+      <Route path="filter/*" element={<Filter />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
+};
+
+export default App;
